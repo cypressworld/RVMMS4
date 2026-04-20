@@ -1,0 +1,69 @@
+:root {
+    --primary: #ff1f1f;
+    --glass: rgba(255, 255, 255, 0.2);
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container { width: 100%; max-width: 800px; text-align: center; }
+
+h1 span { color: var(--primary); }
+
+.search-box { margin-bottom: 40px; }
+
+input {
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    width: 250px;
+    outline: none;
+}
+
+button {
+    padding: 12px 25px;
+    border-radius: 25px;
+    border: none;
+    background: var(--primary);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover { transform: scale(1.1); box-shadow: 0 0 15px var(--primary); }
+
+/* --- ANIMATED CARD --- */
+.pokemon-card {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 20px;
+    display: inline-block;
+    width: 280px;
+    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+.pokemon-card img { width: 150px; filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5)); }
+
+.type-badge {
+    background: #444;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
